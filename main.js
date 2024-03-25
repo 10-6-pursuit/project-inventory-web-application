@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // This will clear the form.
 
-        form.reset();
+        event.target.reset();
 
         // Thius function should help generate a new element in teh index.html document through my javascript.
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         catList.prepend(newResource);
 
-        // The function will help listen for when a "Remove" button is clicked on the new cats' in fo. So, when I click the :"remove" button, next to the cat dertails, the3 function will do something, like remove the cat;s info from teh webpage.
+        // The function will help listen for when a "Remove" button is clicked on the new cats' in fo. So, when I click the "remove" button, next to the cat details, the3 function will do something, like remove the cat;s info from teh webpage.
 
         const newRemoveButton = newResource.querySelector(".remove-button");
         newRemoveButton.addEventListener("click", removeResource);
@@ -87,8 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //  Clears the fomrs. 
-    const resetButton = document.getElementById("reset");
+    const resetButton = document.getElementById("reset-button");
     resetButton.addEventListener("click", function () {
         form.reset();
     });
 });
+
+//Add media query
